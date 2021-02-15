@@ -5,6 +5,11 @@ import RouterComponent from './components/RouterComponent.vue';
 
 Vue.use(Router);
 
+const User = {
+  template: '<div>User</div>'
+}
+
+
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
@@ -13,6 +18,14 @@ export default new Router({
       path: '/',
       component: () => import(/* webpackChunkName: "start" */ './views/main/Start.vue'),
       children: [
+        {
+          path: '/org/:organizational_id',
+          component: () => import('./views/main/organizational/OrgView.vue'),
+        },
+        {
+          path: '/protocol/:protocol_id',
+          component: () => import('./views/main/protocol/ProtocolDescriptor.vue'),
+        },
         {
           path: 'login',
           // route level code-splitting
@@ -27,6 +40,10 @@ export default new Router({
         {
           path: 'reset-password',
           component: () => import(/* webpackChunkName: "reset-password" */ './views/ResetPassword.vue'),
+        },
+        {
+          path: 'splash-screen',
+          component: () => import(/* webpackChunkName: "reset-password" */ './views/Home.vue'),
         },
         {
           path: 'main',

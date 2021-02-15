@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
+    "@vue/cli": "^4.5.11",
     "axios": "^0.18.0",
     "core-js": "^3.4.3",
     "register-service-worker": "^1.0.0",
@@ -17,9 +18,10 @@
     "vee-validate": "^2.1.7",
     "vue": "^2.5.22",
     "vue-class-component": "^6.0.0",
+    "vue-cytoscape": "^1.0.8",
     "vue-property-decorator": "^7.3.0",
     "vue-router": "^3.0.2",
-    "vuetify": "^1.4.4",
+    "vuetify": "^2.4.0",
     "vuex": "^3.1.0"
   },
   "devDependencies": {
@@ -31,10 +33,13 @@
     "@vue/cli-service": "^4.1.1",
     "@vue/test-utils": "^1.0.0-beta.28",
     "babel-core": "7.0.0-bridge.0",
+    "sass": "^1.32.0",
+    "sass-loader": "^10.0.0",
     "ts-jest": "^23.10.5",
     "typescript": "^3.2.4",
-    "vue-cli-plugin-vuetify": "^2.0.2",
-    "vue-template-compiler": "^2.5.22"
+    "vue-cli-plugin-vuetify": "~2.1.0",
+    "vue-template-compiler": "^2.5.22",
+    "vuetify-loader": "^1.7.0"
   },
   "postcss": {
     "plugins": {
