@@ -18,23 +18,30 @@
                   :value=false
                   sub-group
                   prepend-icon="mdi-chevron-right"
-                  ripple=false,
               >
                 <template v-slot:activator>
-                  <v-list-item-title class="protocol-title">{{step.step_title}}</v-list-item-title>
-                  <v-list-item-subtitle class="protocol-amplifying">{{step.step_information}}</v-list-item-subtitle>                </template>
+                  <v-list-item-title class="protocol-title">{{ step.step_title }}</v-list-item-title>
+                  <v-list-item-subtitle class="protocol-amplifying">{{ step.step_information }}</v-list-item-subtitle>
+                </template>
                 <v-list-item
                     v-for="(substep, i) in step.sub_steps"
                     :key="i"
-                    ripple=false,
                 >
                   <v-list-item-action>
-                    <v-checkbox class="subprotocol-checkbox" v-model="substep.sub_step_completion" color="deep-purple accent-4"/>
+                    <v-checkbox class="subprotocol-checkbox" v-model="substep.sub_step_completion"
+                                color="deep-purple accent-4"/>
                   </v-list-item-action>
                   <v-list-item-content>
-                    <v-list-item-title class="subprotocol-description">{{substep.sub_step_description}}</v-list-item-title>
-                    <v-list-item-subtitle class="subprotocol-location">{{substep.sub_step_location}}</v-list-item-subtitle>
+                    <v-list-item-title class="subprotocol-description">{{ substep.sub_step_description }}
+                    </v-list-item-title>
+                    <v-list-item-subtitle class="subprotocol-location">{{ substep.sub_step_location }}
+                    </v-list-item-subtitle>
                   </v-list-item-content>
+                  <v-img
+                      v-bind:src="substep.sub_step_picture"
+                      style="height: 125px; width: 100px;"
+                      class="mb-2"
+                  />
                 </v-list-item>
               </v-list-group>
             </v-list-item-content>
@@ -47,21 +54,26 @@
 
 
 <style scoped>
-.protocol-title{
+.protocol-title {
   font-size: 24px;
 }
-.protocol-amplifying{
+
+.protocol-amplifying {
   font-size: 18px;
 }
+
 .protocol-checkbox {
   transform: scale(2.0);
 }
+
 .subprotocol-checkbox {
   transform: scale(1.25);
 }
+
 .subprotocol-description {
   font-size: 18px !important;
 }
+
 .subprotocol-location {
   font-size: 16px !important;
 }
@@ -88,21 +100,25 @@ export default {
             sub_step_description: 'Obtain Two (2) Slices of Bread',
             sub_step_location: 'Shelf over Fridge',
             sub_step_completion: false,
+            sub_step_picture: "https://drive.google.com/uc?export=view&id=1F-xy_8GlIHZu8Zk_6V2Hu4LJA8GTpeJM",
           },
           2: {
             sub_step_description: 'Obtain Peanut Butter',
             sub_step_location: 'Cabinet over Sink',
             sub_step_completion: false,
+            sub_step_picture: "https://drive.google.com/uc?export=view&id=1T-n3RPzKg4Ma6FSUXF8d_2bKHFjv6vfP",
           },
           3: {
             sub_step_description: 'Obtain Grape Jelly',
             sub_step_location: 'Fridge Interior, Upper Door Shelf, Slot 1',
             sub_step_completion: false,
+            sub_step_picture: "https://drive.google.com/uc?export=view&id=1kFjocT76MZM5WV4mIrlx7WoRpMRWgBWK",
           },
           4: {
             sub_step_description: 'Obtain Knife',
             sub_step_location: 'Cutlery Drawer, Silverware Sorter, Slot 3',
             sub_step_completion: false,
+            sub_step_picture: "https://drive.google.com/uc?export=view&id=1wavvFmTD0rlq0EVD9lwRqlIlxSWrK6EM",
           },
         },
       },
@@ -119,6 +135,7 @@ export default {
                 'bottom or top slice.',
             sub_step_location: 'Cutting Board',
             sub_step_completion: false,
+            sub_step_picture: "",
           },
           2: {
             sub_step_description: 'Open Peanut Butter Jar through clockwise ' +

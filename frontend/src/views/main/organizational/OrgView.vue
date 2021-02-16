@@ -120,13 +120,6 @@
             <b>Protocols</b>
           </v-card-title>
           <v-divider class="mx-4"></v-divider>
-          <v-card-text style="font-size: 22px">
-            The mission of the DAMP lab is to develop novel biological systems
-            using formal representations of protocols and experiments for the
-            specify-design-build-test cycle. <br/><br/>
-            This will allow for faster, more scalable, and reproducible research
-            results that can be transitioned from academia to society.
-          </v-card-text>
         </v-card>
       </v-col>
       <v-col
@@ -137,6 +130,8 @@
         <v-card
             :color="item.color"
             dark
+            :to="item.url_location"
+            link
         >
           <div class="d-flex flex-no-wrap justify-space-between">
             <div>
@@ -146,24 +141,17 @@
               >
               </v-card-title>
             </div>
-            <v-card-subtitle v-text="item.artist"></v-card-subtitle>
             <br/>
             <v-card-subtitle v-text="item.artist"></v-card-subtitle>
 
           </div>
+          <v-divider dark/>
           <div>
 
             <v-card-actions>
-              <v-btn
-                  class="ml-2 mt-3"
-                  fab
-                  icon
-                  height="40px"
-                  right
-                  width="40px"
-              >
-                <v-icon>mdi-play</v-icon>
-              </v-btn>
+              <v-card-text>
+                {{item.description}}
+              </v-card-text>
             </v-card-actions>
           </div>
         </v-card>
@@ -192,16 +180,19 @@ export default Vue.extend({
   data: () => ({
     protocols: [
       {
-        color: '#1F7087',
+        color: 'accent',
         src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
-        title: 'Molecular Cloning',
-        artist: 'Rita Chen',
+        title: 'Spreadable Sandwich Assembly',
+        artist: 'Earl of Sandwich',
+        description: 'Rap Game Strong',
+        url_location: '/protocol/test'
       },
       {
         color: '#952175',
         src: 'https://cdn.vuetifyjs.com/images/cards/halcyon.png',
         title: 'Halcyon Days',
         artist: 'Ellie Goulding',
+        description: 'Dicks',
       },
     ],
     ecosystem: [

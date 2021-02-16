@@ -5,7 +5,7 @@
       <!--Organizational Logo -->
       <v-col class="d-flex flex-column" md='4' cols="3">
         <!--Logic here to to switch to a default logo if one is not present -->
-        <v-card outlined>
+        <v-card outlined elevation="2">
           <v-flex justify-center>
             <v-img
                 :src="require('../../../assets/damp-logo.png')"
@@ -22,18 +22,6 @@
             </v-card-subtitle>
           </v-flex>
           <v-divider class="mx-4"></v-divider>
-
-          <!--          <v-divider class="mx-4"></v-divider>-->
-          <!--          <v-flex text-xs-center>-->
-          <!--            <v-card-subtitle class="text-left" style="font-size:16px">-->
-          <!--              Location: Boston, Massachusetts-->
-          <!--            </v-card-subtitle>-->
-          <!--          </v-flex>-->
-          <!--          <v-flex text-xs-center>-->
-          <!--            <v-card-subtitle class="text-left" style="font-size:16px">-->
-          <!--              Affiliation: Boston University-->
-          <!--            </v-card-subtitle>-->
-          <!--          </v-flex>-->
           <v-list two-line class="organizational-info">
             <v-list-item>
               <v-list-item-icon>
@@ -96,25 +84,79 @@
         </v-card>
       </v-col>
       <v-col class="d-flex flex-column" md="8">
-        <v-card outlined height="582px">
-          <v-card-title class="justify-center" style="font-size:60px;margin-top: 15px">
+        <v-card outlined height="582px" elevation="2">
+          <v-card-title class="title-case justify-center" style="font-size:60px;margin-top: 15px; margin-bottom: 5px">
             <b>Spreadable Sandwich Assembly</b>
           </v-card-title>
           <v-divider class="mx-4"></v-divider>
-          <v-card-text style="font-size: 22px">
+          <v-card-text class="family-case" style="font-size: 22px; text-align: center">
             Creates a Sandwich with canonical standard spreadable condiments
             such as peanut butter and jelly.
+            <br/>
+            <br/>
+            You would imagine me describing why I would make a sandwich, the benefits and drawbacks of the sandwich.
+            <br/>
+            <br/>
+            Maybe some hyperlinks to the related paper.
           </v-card-text>
         </v-card>
       </v-col>
     </v-row>
     <v-row>
       <v-col class="d-flex flex-column" md="12">
-        <v-card outlined>
+        <v-card outlined elevation="2">
           <v-card-title
               class="justify-center"
               style="font-size:60px;margin-top: 15px;margin-bottom: 15px">
-            <b>Protocol View</b>
+            <v-item-group>
+              <v-btn
+                  style="width: 600px"
+                  elevation="2"
+                  class="mr-12"
+                  rounded
+                  depressed
+                  color="secondary"
+              >
+                Clone to new Protocol Run
+              </v-btn>
+              <v-btn
+                  style="width: 300px"
+                  elevation="2"
+                  class="ml-6 mr-8"
+                  rounded
+                  depressed
+                  color="tertiary"
+              >
+                Inventory Check
+              </v-btn>
+              <v-btn
+                  style="width: 200px"
+                  elevation="2"
+                  class="ml-12"
+                  depressed
+                  color="accent"
+              >
+                Log Protocol History
+              </v-btn>
+              <v-btn
+                  style="width: 200px"
+                  elevation="2"
+                  class="ml-2 mr-2"
+                  depressed
+                  color="accent"
+              >
+                Modify Template
+              </v-btn>
+              <v-btn
+                  style="width: 200px"
+                  elevation="2"
+                  class="mr-2"
+                  depressed
+                  color="accent"
+              >
+                Settings
+              </v-btn>
+            </v-item-group>
           </v-card-title>
           <v-divider class="mx-4"></v-divider>
           <v-sheet elevation="6">
@@ -144,7 +186,7 @@
                 <ProtocolChecklist/>
               </v-tab-item>
               <v-tab-item>
-               <ProtocolGraph/>
+                <ProtocolGraph/>
               </v-tab-item>
               <v-tab-item>
                 <ProtocolAutomation/>
@@ -163,11 +205,21 @@
 </template>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
 .organizational-info {
   font-size: 18px;
-
-
 }
+
+
+/*.title-case {*/
+/*  font-family: "Open+Sans";*/
+/*}*/
+
+/*.family-case {*/
+/*  font-family: "Open+Sans";*/
+/*}*/
 </style>
 
 
