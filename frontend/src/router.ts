@@ -27,6 +27,10 @@ export default new Router({
           component: () => import('./views/main/protocol/ProtocolDescriptor.vue'),
         },
         {
+          path: '/protocol_builder/:protocol_id',
+          component: () => import('./views/main/protocol_builder/Builder.vue'),
+        },
+        {
           path: 'login',
           // route level code-splitting
           // this generates a separate chunk (about.[hash].js) for this route
