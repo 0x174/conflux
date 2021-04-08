@@ -25,17 +25,17 @@
               </v-row>
               <v-row class="mt-0 mb-0">
                 <v-col class="d-flex" md="9">
-                <v-list-item-subtitle class="platform-description">{{ platform.description }}
-                </v-list-item-subtitle>
+                  <v-list-item-subtitle class="platform-description">{{ platform.description }}
+                  </v-list-item-subtitle>
                 </v-col>
                 <v-col class="d-flex flex-column" md="3">
-                  <v-chip color='green' v-if="platform.verified_working" >
+                  <v-chip color='green' v-if="platform.verified_working">
                     <v-icon left>
                       mdi-check
                     </v-icon>
                     Verified: {{ platform.verification_date }}
                   </v-chip>
-                  <v-chip v-else >
+                  <v-chip v-else>
                     Never Verified
                   </v-chip>
 
@@ -43,11 +43,11 @@
               </v-row>
               <v-list-item-action>
                 <div v-if="platform.protocol_available">
-                <v-btn class="automation-interaction-button"
-                       color="primary"
-                       elevation="2">
-                  Download
-                </v-btn>
+                  <v-btn class="automation-interaction-button"
+                         color="primary"
+                         elevation="2">
+                    Download
+                  </v-btn>
                   <v-btn class="ml-4" color="primary">
                     Send to Geist Instance
                   </v-btn>
@@ -98,7 +98,7 @@ export default {
           protocol_available: true,
           verified_working: true,
           verification_date: "01/01/2021",
-          estimated_cost: '$4.20'
+          estimated_cost: '$4.20',
         },
         {
           title: 'Hamilton MicroSTAR',
@@ -106,7 +106,7 @@ export default {
           protocol_available: true,
           verified_working: false,
           verification_date: "01/01/2021",
-          estimated_cost: '$0.69'
+          estimated_cost: '$0.69',
         },
         {
           title: 'Labcyte Echo',
@@ -114,7 +114,7 @@ export default {
           protocol_available: false,
           verified_working: false,
           verification_date: "01/01/2021",
-          estimated_cost: '$0.00'
+          estimated_cost: '$0.00',
         }
       ],
     },
